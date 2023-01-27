@@ -1,0 +1,30 @@
+@import '../../../scss/variables';
+
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+
+  .login {
+    width: 20rem;
+    .login-input {
+      padding: 8px 4px;
+    }
+
+    button {
+      background-color: $successColor;
+      color: $lightColor;
+      padding: 8px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+   }
+}
