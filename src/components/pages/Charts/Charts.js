@@ -3,6 +3,7 @@ import React, { useState, Fragment } from "react";
 import { Card } from 'primereact/card';
 import { Chart } from 'primereact/chart';
 import './Charts.scss';
+import { FormattedMessage } from "react-intl";
 
 const Charts = (props) => {
 
@@ -161,7 +162,7 @@ const Charts = (props) => {
     return (
         <Fragment>
             <div className="charts">
-                <h1>{title}</h1>
+                <h1><FormattedMessage id="Charts" /></h1>
                 <section className="charts-container">
                     <Card title="Pie Chart" >
                         <Chart type="pie" data={data} />

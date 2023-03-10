@@ -5,6 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
 
 import './Header.scss';
+import { LOCALES } from '../../../i18n/locales';
+
+// Languages
+const languages = [
+    { name: "English", code: LOCALES.ENGLISH },
+    { name: "日本語", code: LOCALES.JAPANESE },
+    { name: "Français", code: LOCALES.FRENCH },
+    { name: "Deutsche", code: LOCALES.GERMAN },
+  ];
 
 const Header = (props) => {
 

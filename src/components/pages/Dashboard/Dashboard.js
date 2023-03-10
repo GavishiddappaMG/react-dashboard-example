@@ -1,4 +1,4 @@
-import React, { useState, Fragment, Suspense, Await } from "react";
+import React, { Fragment } from "react";
 import {
   faUserFriends,
   faFile,
@@ -7,26 +7,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card } from "primereact/card";
-import { Button } from "primereact/button";
+import { FormattedMessage } from "react-intl";
 import "./Dashboard.scss";
 
-import { BasicExample } from "./BasicExample";
-import CustomHooks from "../CustomHooks/CustomHooks";
 
 const Dashboard = () => {
-  const [title, setTitle] = useState("Dashborad");
 
   return (
     <Fragment>
       <div className="dashboard">
-        <h1>{title}</h1>
+        <h1><FormattedMessage id="Dashboard" /></h1>
         <section className="card-container">
           <div className="item">
             <div className="flex-item">
               <FontAwesomeIcon icon={faUserFriends} />
             </div>
             <div className="flex-item">
-              <p>Visitors</p>
+              <p><FormattedMessage id="Visitors" /></p>
               <p>1500</p>
             </div>
           </div>
@@ -102,12 +99,9 @@ const Dashboard = () => {
               title="Simple Card 3"
               style={{ width: "100%", height: "100%" }}
             >
-              For more straightforward sizing in CSS, we switch the global
-              box-sizing value from content-box to border-box. This ensures
-              padding does not affect the final computed width of an element,
-              but it can cause problems with some third party software like
-              Google Maps and Google Custom Search Engine. On the rare occasion
-              you need to override it, use something like the following:
+              <p><FormattedMessage id="price_display" values={{ n: 59.99 }} /></p>
+              <p><FormattedMessage id="number_display" values={{ n: 2000 }} /></p>
+              <p><FormattedMessage id="start_today" values={{ d: new Date() }} /></p>
             </Card>
           </div>
           <div className="grid-item item4">
@@ -115,8 +109,18 @@ const Dashboard = () => {
               title="Simple Card 4"
               style={{ width: "100%", height: "100%" }}
             >
-              <h2>Custom Hooks Example</h2>
-              <CustomHooks />
+              For more straightforward sizing in CSS, we switch the global
+              box-sizing value from content-box to border-box. This ensures
+              padding does not affect the final computed width of an element,
+              but it can cause problems with some third party software like
+              Google Maps and Google Custom Search Engine. On the rare occasion
+              you need to override it, use something like the following:For more
+              straightforward sizing in CSS, we switch the global box-sizing
+              value from content-box to border-box. This ensures padding does
+              not affect the final computed width of an element, but it can
+              cause problems with some third party software like Google Maps and
+              Google Custom Search Engine. On the rare occasion you need to
+              override it, use something like the following:
             </Card>
           </div>
           <div className="grid-item item5">

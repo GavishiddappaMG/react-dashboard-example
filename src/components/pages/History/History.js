@@ -1,11 +1,9 @@
-import React, { Fragment, useState, useEffect } from 'react';
-
-import { faUser, faSignOutAlt, faBuilding, faHeadset, faSearch  } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Fragment, useState } from 'react';
 
 import Tiles from './../../Shared/Tiles/Tiles';
 
 import './History.scss';
+import { FormattedMessage } from 'react-intl';
 
 const History = (props) => {
 
@@ -32,7 +30,7 @@ const History = (props) => {
     return (
         <Fragment >
             <main className="history">
-                <h1>History Page</h1>
+                <h1><FormattedMessage id="History" /></h1>
                 <Tiles data={data} />
             </main>
         </Fragment>

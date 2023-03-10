@@ -1,6 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
+import Carousel from '../../Shared/Carousel/Carousel';
+import CarouselPage from '../../Shared/CarouselPage/CarouselPage';
 
+const carouselContainer = {
+  padding: '1rem',
+}
 const Users = () => {
   const [users, setUsers] = useState([]);
 
@@ -22,7 +28,7 @@ const Users = () => {
 
     return (
       <>
-      <h2>Users</h2>
+      <h2><FormattedMessage id="Users" /></h2>
       {users.length ? (
         <ul data-testid="user-list">
           {users.map(user => (
@@ -34,6 +40,10 @@ const Users = () => {
       ) : (
         <div>Loading users...</div>
       )}
+      <div className="carouselContainer">
+        {/* <CarouselPage /> */}
+        <Carousel />
+      </div>
       </>
     );
 }

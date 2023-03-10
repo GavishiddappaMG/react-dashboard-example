@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { faHome, faCalendar, faUser, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FormattedMessage } from "react-intl";
 import "./Sidebar.scss";
 
 const navItems = [
@@ -9,25 +10,25 @@ const navItems = [
     id: 1,
     to: "/",
     icon: faHome,
-    linkText: "Dashboard",
+    linkText: <FormattedMessage id="Dashboard" />,
   },
   {
     id: 2,
     to: "/charts",
     icon: faCalendar,
-    linkText: "Charts",
+    linkText: <FormattedMessage id="Charts" />,
   },
   {
     id: 3,
     to: "/history",
     icon: faUser,
-    linkText: "History",
+    linkText: <FormattedMessage id="History" />,
   },
   {
-    id: 3,
+    id: 4,
     to: "/users",
     icon: faUserGroup,
-    linkText: "Users",
+    linkText: <FormattedMessage id="Users" />,
   },
 ];
 const NavItem = ({ to, icon, linkLabel }) => {
