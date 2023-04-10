@@ -7,7 +7,8 @@ const Login = () => {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <div className="login-form">
-      <h2>Login Form</h2>
+      <div className="form-container">
+      <h2>Member Login</h2>
       <Form method={"post"} className="login">
         <Input
           label="Username"
@@ -33,6 +34,7 @@ const Login = () => {
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
       </Form>
+      </div>
     </div>
   );
 };

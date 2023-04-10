@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Carousel from '../../Shared/Carousel/Carousel';
 import CarouselPage from '../../Shared/CarouselPage/CarouselPage';
+import './Users.scss';
 
 const carouselContainer = {
   padding: '1rem',
@@ -29,7 +30,7 @@ const Users = () => {
     return (
       <>
       <h2><FormattedMessage id="Users" /></h2>
-      {users.length ? (
+      {/* {users.length ? (
         <ul data-testid="user-list">
           {users.map(user => (
             <li key={user.id} className="user" data-testid="user-item">
@@ -39,11 +40,12 @@ const Users = () => {
         </ul>
       ) : (
         <div>Loading users...</div>
-      )}
-      <div className="carouselContainer">
-        {/* <CarouselPage /> */}
+      )} */}
+      {/* <div className="carouselContainer">
+        <CarouselPage />
         <Carousel />
-      </div>
+      </div> */}
+
       </>
     );
 }
